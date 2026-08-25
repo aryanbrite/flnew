@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Access Denied
+{% endblock %}
+
+{% block brand_name %}
+    Survey
+{% endblock %}
+
+{% block content %}
+
+<style>
+    .error-page {
+        max-width: 650px;
+        margin: 80px auto;
+        padding: 50px 30px;
+        text-align: center;
+        background: #ffffff;
+        border: 1px solid #d0d7de;
+        border-radius: 12px;
+    }
+
+    .error-icon {
+        width: 64px;
+        height: 64px;
+        margin: 0 auto 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: #cf222e;
+        color: white;
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    .error-page h1 {
+        margin-bottom: 16px;
+        color: #1f2328;
+        font-size: 32px;
+    }
+
+    .error-page p {
+        margin-bottom: 30px;
+        color: #656d76;
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 18px;
+        border-radius: 6px;
+        background: #1f883d;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .button:hover {
+        background: #1a7f37;
+    }
+</style>
+
+<div class="error-page">
+
+    <div class="error-icon">!</div>
+
+    <h1>Please fill out the form first</h1>
+
+    <p>
+        You can't access this page yet.
+        Please complete the survey before continuing.
+    </p>
+
+    <a href="{{ url_for('form') }}" class="button">
+        Fill Out Survey
+    </a>
+
+</div>
+
+{% endblock %}
+
+{% block footer_brand %}
+    Survey
+{% endblock %}
+
+{% block copyright_year %}
+    2026
+{% endblock %}

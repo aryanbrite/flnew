@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+{% block head %}
+<style>
+    #form #feed {
+    width: 100%;
+    min-height: 180px;
+    padding: 0.8rem;
+    box-sizing: border-box;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #24292f;
+    background: #ffffff;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    outline: none;
+}
+
+#form #feed:focus {
+    border-color: #0969da;
+    box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.15);
+}
+    #form {
+        max-width: 650px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background: #ffffff;
+        border: 1px solid #d0d7de;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        box-sizing: border-box;
+    }
+
+    #form label {
+        display: block;
+        margin: 1rem 0 0.4rem;
+        color: #24292f;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    #form input[type="text"] {
+        width: 100%;
+        padding: 0.7rem 0.8rem;
+        box-sizing: border-box;
+        color: #24292f;
+        background: #ffffff;
+        border: 1px solid #d0d7de;
+        border-radius: 6px;
+        font-size: 1rem;
+        outline: none;
+        transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+    #form input[type="text"]:focus {
+        border-color: #0969da;
+        box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.15);
+    }
+
+    #form input[type="checkbox"] {
+        margin: 1.2rem 0.5rem 0 0;
+        accent-color: #0969da;
+        cursor: pointer;
+    }
+
+    #form label[for="internal"] {
+        display: inline;
+        margin: 0;
+        font-weight: 400;
+        cursor: pointer;
+    }
+
+    #form input[type="submit"] {
+        display: block;
+        margin-top: 1.5rem;
+        padding: 0.65rem 1.2rem;
+        color: #ffffff;
+        background: #1f883d;
+        border: 1px solid rgba(31, 35, 40, 0.15);
+        border-radius: 6px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.15s;
+    }
+
+    #form input[type="submit"]:hover {
+        background: #1a7f37;
+    }
+
+    #form input[type="submit"]:active {
+        background: #176f2c;
+    }
+</style>
+{% endblock head %}
+{% block title %}
+    Form
+{% endblock %}
+
+{% block brand_name %}
+    Form
+{% endblock %}
+
+{% block content %}
+    <h1>Meta Form</h1>
+    <p>Hello Github Developer, Your feedback and reccomendation helps Github shine bright. Feel free to fill this form weather its external feedback for users or internal.</p>
+    <form id="form" action="form" method="post">
+        <label for="name">Name</label>
+        <input name="name" autocomplete="off" id="name" type="text">
+        <label for="feed">Feedback</label>
+        <textarea autocomplete="off" id="feed" name="feedback" placeholder="Write your feedback here..."></textarea>
+        <input type="checkbox" name="internal" id="internal">
+        <label for="internal">Is this a internal feedback ?</label>
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}
+
+{% block footer_brand %}
+    Survay
+{% endblock %}
+
+
+{% block copyright_year %}
+    2026
+{% endblock%}

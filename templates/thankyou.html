@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Thank You
+{% endblock %}
+
+{% block brand_name %}
+    Thank You
+{% endblock %}
+
+{% block content %}
+
+<style>
+    .success-page {
+        max-width: 650px;
+        margin: 80px auto;
+        padding: 50px 30px;
+        text-align: center;
+        background: #ffffff;
+        border: 1px solid #d0d7de;
+        border-radius: 12px;
+    }
+
+    .success-icon {
+        width: 64px;
+        height: 64px;
+        margin: 0 auto 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: #1f883d;
+        color: white;
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    .success-page h1 {
+        margin-bottom: 16px;
+        color: #1f2328;
+        font-size: 32px;
+    }
+
+    .success-page p {
+        margin-bottom: 30px;
+        color: #656d76;
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 18px;
+        border-radius: 6px;
+        background: #1f883d;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .button:hover {
+        background: #1a7f37;
+    }
+</style>
+
+{% if session["internal"] == "on" %}
+
+<div class="success-page">
+    <div class="success-icon">✓</div>
+
+    <h1>Thank you for your feedback!</h1>
+
+    <p>
+        Your response will help improve the GitHub experience
+        for the entire community.
+    </p>
+
+    <a href="/" class="button">Back to Home</a>
+</div>
+
+{% else %}
+
+<div class="success-page">
+    <div class="success-icon">✓</div>
+
+    <h1>Thank you for your feedback!</h1>
+
+    <p>
+        Your response will help us improve the experience
+        for GitHub users.
+    </p>
+
+    <a href="/" class="button">Back to Home</a>
+</div>
+
+{% endif %}
+
+{% endblock %}
+
+{% block footer_brand %}
+    Survey
+{% endblock %}
+
+{% block copyright_year %}
+    2026
+{% endblock %}
