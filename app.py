@@ -37,3 +37,4 @@ def thankyou():
         return render_template("error.html")
 
 
+app.run()
